@@ -1,4 +1,4 @@
-# [Portfolio_kennethjk3.github.io](https://htmlpreview.github.io/?https://github.com/Kennethjk3/Portfolio_kennethjk3.github.io/blob/master/index.html)  
+# [Portfolio_kennethjk3.github.io](https://kennethjk3.github.io)  
 
 
 ## Copyright and License
