@@ -243,9 +243,9 @@ section.success a.active {
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
-    box-shadow: 10px 10px 5px rgba(155,155,155, 0.3), -10px -10px 5px rgba(155,155,155, 0.3), 0px 0px 5px 5px #cc6600;
-    -moz-box-shadow: 10px 10px 5px rgba(155,155,155, 0.3), -10px -10px 5px rgba(155,155,155, 0.3), 0px 0px 5px 5px #cc6600;
-    -webkit-box-shadow: 10px 10px 5px rgba(155,155,155, 0.3), -10px -10px 5px rgba(155,155,155, 0.3), 0px 0px 5px 5px #cc6600;
+    box-shadow: -10px -10px 5px rgba(0,0,0, .9), 10px 10px 5px rgba(0,0,0, .9), 0px 0px 4px 4px #cc6600;
+    -moz-box-shadow: -10px -10px 5px rgba(0,0,0, .9), 10px 10px 5px rgba(0,0,0, .9), 0px 0px 4px 4px #cc6600;
+    -webkit-box-shadow: -10px -10px 5px rgba(0,0,0, .9), 10px 10px 5px rgba(0,0,0, .9), 0px 0px 4px 4px #cc6600;
 
 }
 
