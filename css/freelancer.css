@@ -94,11 +94,7 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    /*background: url("/img/sec_header.png") no-repeat center center fixed;
-    -webkit-background-size: 100% auto;
-    -moz-background-size: 100% auto;
-    -o-background-size: 100% auto;
-    background-size: 100% auto;*/
+    background-color: rgba(50, 50, 50, .05);
   }
 
 header .container {
@@ -140,13 +136,7 @@ header .intro-text .skills {
     }
 }
 
-.navbar{
-  background: url("/img/background.jpg") no-repeat center fixed ;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+
 
 @media(min-width:768px) {
     .navbar-fixed-top {
@@ -176,6 +166,11 @@ header .intro-text .skills {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+    background: url("/img/background.jpg") no-repeat center fixed ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .navbar a:focus {
@@ -245,10 +240,13 @@ section.success a.active {
     width: 100%;
     height: 100%;
     opacity: 0;
-    background: rgba(24,188,156,.9);
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
+    box-shadow: 10px 10px 5px rgba(155,155,155, 0.3), -10px -10px 5px rgba(155,155,155, 0.3), 0px 0px 5px 5px #cc6600;
+    -moz-box-shadow: 10px 10px 5px rgba(155,155,155, 0.3), -10px -10px 5px rgba(155,155,155, 0.3), 0px 0px 5px 5px #cc6600;
+    -webkit-box-shadow: 10px 10px 5px rgba(155,155,155, 0.3), -10px -10px 5px rgba(155,155,155, 0.3), 0px 0px 5px 5px #cc6600;
+
 }
 
 #portfolio .portfolio-item .portfolio-link .caption:hover {
