@@ -218,6 +218,10 @@ section.success a.active {
         padding-top: 75px;
     }
 }
+.contact-item {
+  margin-top: 50px;
+
+}
 
 #portfolio .portfolio-item {
     right: 0;
@@ -479,4 +483,11 @@ footer .footer-below {
 .portfolio-modal .modal-backdrop {
     display: none;
     opacity: 0;
+}
+.progress .progress-bar.six-sec-ease-in-out {
+    -webkit-transition: width 6s ease-in-out;
+    -moz-transition: width 6s ease-in-out;
+    -ms-transition: width 6s ease-in-out;
+    -o-transition: width 6s ease-in-out;
+    transition: width 6s ease-in-out;
 }

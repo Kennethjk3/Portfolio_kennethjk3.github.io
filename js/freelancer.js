@@ -35,3 +35,9 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+$(window).ready(function(e){
+      $.each($('div.progress-bar'),function(){
+        $(this).css('width', $(this).attr('aria-valuetransitiongoal')+'%');
+      });
+});
