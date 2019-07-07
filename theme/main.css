@@ -1,0 +1,376 @@
+/* LOAD FONTS */
+   /* Proxima Nova */
+      @font-face{font-family:'proxima-nova';src:url(../fonts/proxima-nova-7n.woff2) format('woff2'),url(../fonts/proxima-nova-7n.woff) format('woff'),url(../fonts/proxima-nova-7n.ttf) format('opentype');font-weight:700;font-style:normal;}
+      @font-face{font-family:'proxima-nova';src:url(../fonts/proxima-nova-7i.woff2) format('woff2'),url(../fonts/proxima-nova-7i.woff) format('woff'),url(../fonts/proxima-nova-7i.ttf) format('opentype');font-weight:700;font-style:italic;}
+      @font-face{font-family:'proxima-nova';src:url(../fonts/proxima-nova-4n.woff2) format('woff2'),url(../fonts/proxima-nova-4n.woff) format('woff'),url(../fonts/proxima-nova-4n.ttf) format('opentype');font-weight:400;font-style:normal;}
+      @font-face{font-family:'proxima-nova';src:url(../fonts/proxima-nova-4i.woff2) format('woff2'),url(../fonts/proxima-nova-4i.woff) format('woff'),url(../fonts/proxima-nova-4i.ttf) format('opentype');font-weight:400;font-style:italic;}
+
+   /* Roboto */
+      @font-face{font-family:'roboto';src:url(../fonts/roboto-7n.woff2) format('woff2'),url(../fonts/roboto-7n.woff) format('woff'),url(../fonts/roboto-7n.ttf) format('opentype');font-weight:700;font-style:normal;}
+      @font-face{font-family:'roboto';src:url(../fonts/roboto-7i.woff2) format('woff2'),url(../fonts/roboto-7i.woff) format('woff'),url(../fonts/roboto-7i.ttf) format('opentype');font-weight:700;font-style:italic;}
+      @font-face{font-family:'roboto';src:url(../fonts/roboto-4n.woff2) format('woff2'),url(../fonts/roboto-4n.woff) format('woff'),url(../fonts/roboto-4n.ttf) format('opentype');font-weight:400;font-style:normal;}
+      @font-face{font-family:'roboto';src:url(../fonts/roboto-4i.woff2) format('woff2'),url(../fonts/roboto-4i.woff) format('woff'),url(../fonts/roboto-4i.ttf) format('opentype');font-weight:400;font-style:italic;}
+
+/* PRE-SETUP */
+   /* Resets */
+      html#doc {
+         box-sizing: border-box;
+         -webkit-box-sizing: border-box;
+         margin: 0 !important;
+      }
+      #wpadminbar *, *, *:before, *:after, *:focus, *:hover {
+         outline: none;
+         box-sizing: inherit;
+         -webkit-box-sizing: inherit;
+         -webkit-font-smoothing: antialiased;
+         -moz-osx-font-smoothing: grayscale;
+         text-rendering: geometricPrecision;
+         -webkit-tap-highlight-color: transparent;
+         -webkit-tap-highlight-color: rgba(0,0,0,0);
+      }
+      body {
+         margin: 0;
+         padding: 0;
+         height: 100%;
+         font-style: normal;
+         cursor: default;
+         font-size: 100%;
+      }
+      svg:not(:root) {
+         overflow: hidden;
+      }
+      template, [hidden], .hidden, .hide {
+         display: none;
+      }
+      main, article, aside, details, figcaption, figure, footer,
+      header, hgroup, menu, nav, section, summary {
+         display: block;
+      }
+      input, optgroup, select, textarea {
+         color: inherit;
+         font: inherit;
+         margin: 0;
+      }
+      legend {
+         border: 0;
+         padding: 0;
+      }
+      .button,
+      keygen,
+      progress,
+      button, meter, select,
+      textarea, fieldset,
+      input[type='text'],
+      input[type='password'],
+      input[type='date'],
+      input[type='datetime'],
+      input[type='datetime-local'],
+      input[type='month'],
+      input[type='week'],
+      input[type='email'],
+      input[type='number'],
+      input[type='search'],
+      input[type='tel'],
+      input[type='time'],
+      input[type='url'],
+      input[type='file'],
+      input[type='submit'],
+      input[type='button'],
+      input:not([type='radio']):not([type='checkbox']) {
+         -moz-appearance: none;
+         -webkit-appearance: none;
+         transition: none;
+         -o-transition: none;
+         -moz-transition: none;
+         -webkit-transition: none;
+         outline: none !important;
+         background-image: none;
+         text-shadow: none;
+         -webkit-box-shadow: none;
+         box-shadow: none;
+         -webkit-border-radius: 0;
+         -khtml-border-radius: 0;
+         border-radius: 0;
+         text-indent: 0;
+         margin: 0;
+         border: 0;
+      }
+      ::-moz-focus-outer {
+         border: 0;
+         outline: none;
+      }
+
+   /* Preformatted Text */
+      pre code br {
+         display: none;
+      }
+      pre {
+         overflow: auto;
+         clear: both;
+         display: block;
+         margin: 1.5rem 0;
+      }
+
+   /* Abbreviations */
+      abbr,
+      abbr[title],
+      acronym {
+         border-left: 0;
+         border-right: 0;
+         border-top: 0;
+         border-bottom-width: 3px;
+         border-bottom-style: dotted;
+         cursor: help;
+      }
+
+   /* Subscript & Superscript */
+      sup, sub {
+         position: relative;
+         vertical-align: baseline;
+      }
+      sup {
+         top: -0.5em;
+      }
+      sub {
+         bottom: -0.25em;
+      }
+
+   /* Tables */
+      table {
+         border-collapse: collapse;
+         border-spacing: 0;
+         border: 0;
+         margin-bottom: 1.25rem;
+         max-width: 100%;
+         width: 100%;
+      }
+      td, th {
+         padding: 0;
+      }
+      table caption {
+         padding: 0.5rem 0;
+      }
+      table thead tr th,
+      table thead tr td {
+         padding: 0.5rem 0;
+      }
+      table tr th,
+      table tr td {
+         padding: 0.5rem 0;
+      }
+      table tfoot tr th,
+      table tfoot tr td {
+         padding: 0.5rem 0;
+      }
+      table thead tr th,
+      table tfoot tr th,
+      table tfoot tr td,
+      table tbody tr th,
+      table tbody tr td,
+      table tr td {
+         display: table-cell;
+         text-align: center;
+         border: 0;
+      }
+
+/* FONT */
+   /* Font Families */
+      body, p {
+         font-family: 'proxima-nova', sans-serif;
+      }
+      h1, h2, h3, h4, h5, h6,
+      #doc .button,
+      #doc input.button,
+      #doc input[type='submit'],
+      #doc input[type='button'],
+      label, label small {
+         font-family: 'roboto', sans-serif;
+      }
+
+   /* Font Size */
+      .size1, h1 {
+         font-size: 2.25rem;
+      }
+      .size2, h2 {
+         font-size: 2.00rem;
+      }
+      .size3, h3 {
+         font-size: 1.75rem;
+      }
+      .size4, h4 {
+         font-size: 1.50rem;
+      }
+      .size5, h5, {
+         font-size: 1.25rem;
+      }
+      .size6, h6,
+      body, p, ul, ol, dl, table,
+      #doc .button,
+      #doc input.button,
+      #doc button,
+      #doc input,
+      #doc select,
+      #doc textarea,
+      #doc input[type='submit'],
+      #doc input[type='button'],
+      #doc input[type='text'],
+      #doc input[type='search'],
+      #doc input[type='password'],
+      #doc input[type='date'],
+      #doc input[type='datetime'],
+      #doc input[type='datetime-local'],
+      #doc input[type='month'],
+      #doc input[type='week'],
+      #doc input[type='email'],
+      #doc input[type='number'],
+      #doc input[type='search'],
+      #doc input[type='tel'],
+      #doc input[type='file'],
+      #doc input[type='time'],
+      #doc input[type='url'],
+      #doc input[type='checkbox'],
+      #doc input[type='radio'] {
+         font-size: 1.125rem;
+      }
+      ::-webkit-input-placeholder {
+         font-size: 1.125rem;
+      }
+      ::-ms-input-placeholder {
+         font-size: 1.125rem;
+      }
+      ::-moz-placeholder {
+         font-size: 1.125rem;
+      }
+      .small, small, sup, sub,
+      abbr, abbr[title], acronym,
+      label, label small {
+         font-size: 0.75rem;
+      }
+
+   /* Font Weight */
+      .light, .fal {
+         font-weight: 300;
+      }
+      .regular,
+      body, p, h5,
+      select,
+      #doc select,
+      #doc textarea,
+      #doc input[type='text'],
+      #doc input[type='password'],
+      #doc input[type='date'],
+      #doc input[type='datetime'],
+      #doc input[type='datetime-local'],
+      #doc input[type='month'],
+      #doc input[type='week'],
+      #doc input[type='email'],
+      #doc input[type='number'],
+      #doc input[type='search'],
+      #doc input[type='tel'],
+      #doc input[type='file'],
+      #doc input[type='time'],
+      #doc input[type='url'] {
+         font-weight: 400;
+      }
+      ::-webkit-input-placeholder {
+         font-weight: 400;
+      }
+      ::-ms-input-placeholder {
+         font-weight: 400;
+      }
+      ::-moz-placeholder {
+         font-weight: 400;
+      }
+      .bold, b, strong,
+      h1, h2, h3, h4, h6,
+      blockquote cite,
+      optgroup, table caption,
+      table thead, table thead tr th, table thead tr td,
+      table tfoot tr th, table tfoot tr td,
+      #doc .button,
+      #doc input.button,
+      #doc input[type='submit'],
+      #doc input[type='button'],
+      #doc input[type='search'],
+      label, label small {
+         font-weight: 700;
+      }
+      .extra-bold {
+         font-weight: 900;
+      }
+
+   /* Line Height */
+      body, p,
+      figcaption.wp-caption-text {
+         line-height: 1.5;
+      }
+      .size1, .size2, .size3,
+      h1, h2, h3,
+      .line-height-description {
+         line-height: 1.25;
+      }
+      .size0,
+      .line-height-title,
+      label, label small,
+      #doc select,
+      #doc li span.radio,
+      #doc li span.checkbox,
+      #doc input[type='checkbox'],
+      #doc input[type='radio'] {
+         line-height: 1;
+      }
+      .no-line-height,
+      sup, sub, img,
+      img.alignleft,
+      img.alignright,
+      img.alignnone,
+      img.aligncenter {
+         line-height: 0;
+      }
+
+   /* Letter Spacing */
+      h1, h2, h3, h4, h5, h6,
+      #doc .button,
+      #doc input.button,
+      #doc input[type='submit'],
+      #doc input[type='button'],
+      label, label small {
+         letter-spacing: 0.09375rem;
+      }
+      .no-spacing {
+         letter-spacing: normal;
+      }
+
+   /* Font Style */
+      .uppercase,
+      h1, h2, h3, h4, h5, h6,
+      #doc .button,
+      #doc input.button,
+      #doc input[type='submit'],
+      #doc input[type='button'],
+      label, label small{
+         text-transform: uppercase;
+      }
+      .no-transform {
+         text-transform: none;
+      }
+      .no-decoration {
+         text-decoration: none;
+      }
+      .italic,
+      em, dfn {
+         font-style: italic;
+      }
+
+   /* Font Padding & Margins */
+      h1, h2, h3, h4, h5, h6 {
+         margin: 0 0 0.9375rem 0;
+      }
+      p {
+         padding: 0;
+         margin: 0 0 1.40625rem 0;
+      }
+      p + h1, p + h2, p + h3,
+      p + h4, p + h5, p + h6 {
+         margin-top: 2.8125rem;
+      }
