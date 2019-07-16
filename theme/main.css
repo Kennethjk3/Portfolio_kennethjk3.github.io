@@ -1,4 +1,10 @@
 /* LOAD FONTS */
+   /* Proxima Nova */
+      @font-face{font-family:'lato';src:url(../fonts/lato-7n.woff2) format('woff2'),url(../fonts/lato-7n.woff) format('woff'),url(../fonts/lato-7n.ttf) format('opentype');font-weight:700;font-style:normal;}
+      @font-face{font-family:'lato';src:url(../fonts/lato-7i.woff2) format('woff2'),url(../fonts/lato-7i.woff) format('woff'),url(../fonts/lato-7i.ttf) format('opentype');font-weight:700;font-style:italic;}
+      @font-face{font-family:'lato';src:url(../fonts/lato-4n.woff2) format('woff2'),url(../fonts/lato-4n.woff) format('woff'),url(../fonts/lato-4n.ttf) format('opentype');font-weight:400;font-style:normal;}
+      @font-face{font-family:'lato';src:url(../fonts/lato-4i.woff2) format('woff2'),url(../fonts/lato-4i.woff) format('woff'),url(../fonts/lato-4i.ttf) format('opentype');font-weight:400;font-style:italic;}
+
    /* Roboto */
       @font-face{font-family:'roboto';src:url(../fonts/roboto-7n.woff2) format('woff2'),url(../fonts/roboto-7n.woff) format('woff'),url(../fonts/roboto-7n.ttf) format('opentype');font-weight:700;font-style:normal;}
       @font-face{font-family:'roboto';src:url(../fonts/roboto-7i.woff2) format('woff2'),url(../fonts/roboto-7i.woff) format('woff'),url(../fonts/roboto-7i.ttf) format('opentype');font-weight:700;font-style:italic;}
@@ -170,7 +176,7 @@
 /* FONT */
    /* Font Families */
       body, p {
-         font-family: 'proxima-nova', sans-serif;
+         font-family: 'lato', sans-serif;
       }
       h1, h2, h3, h4, h5, h6,
       #doc .button,
