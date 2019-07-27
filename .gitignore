@@ -2,3 +2,4 @@ sections_help.html
 gitignore
 ./helper
 /helper
+.DS_Store
