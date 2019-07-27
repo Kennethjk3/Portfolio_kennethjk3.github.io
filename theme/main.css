@@ -1,184 +1,249 @@
 /* LOAD FONTS */
    /* Proxima Nova */
-      @font-face{font-family:'lato';src:url(../fonts/lato-7n.woff2) format('woff2'),url(../fonts/lato-7n.woff) format('woff'),url(../fonts/lato-7n.ttf) format('opentype');font-weight:700;font-style:normal;}
-      @font-face{font-family:'lato';src:url(../fonts/lato-7i.woff2) format('woff2'),url(../fonts/lato-7i.woff) format('woff'),url(../fonts/lato-7i.ttf) format('opentype');font-weight:700;font-style:italic;}
-      @font-face{font-family:'lato';src:url(../fonts/lato-4n.woff2) format('woff2'),url(../fonts/lato-4n.woff) format('woff'),url(../fonts/lato-4n.ttf) format('opentype');font-weight:400;font-style:normal;}
-      @font-face{font-family:'lato';src:url(../fonts/lato-4i.woff2) format('woff2'),url(../fonts/lato-4i.woff) format('woff'),url(../fonts/lato-4i.ttf) format('opentype');font-weight:400;font-style:italic;}
+      @font-face{font-family:'lato';src:url(theme/fonts/lato-7n.woff2) format('woff2'),url(theme/fonts/lato-7n.woff) format('woff'),url(theme/fonts/lato-7n.ttf) format('opentype');font-weight:700;font-style:normal;}
+      @font-face{font-family:'lato';src:url(theme/fonts/lato-7i.woff2) format('woff2'),url(theme/fonts/lato-7i.woff) format('woff'),url(theme/fonts/lato-7i.ttf) format('opentype');font-weight:700;font-style:italic;}
+      @font-face{font-family:'lato';src:url(theme/fonts/lato-4n.woff2) format('woff2'),url(theme/fonts/lato-4n.woff) format('woff'),url(theme/fonts/lato-4n.ttf) format('opentype');font-weight:400;font-style:normal;}
+      @font-face{font-family:'lato';src:url(theme/fonts/lato-4i.woff2) format('woff2'),url(theme/fonts/lato-4i.woff) format('woff'),url(theme/fonts/lato-4i.ttf) format('opentype');font-weight:400;font-style:italic;}
 
    /* Roboto */
-      @font-face{font-family:'roboto';src:url(../fonts/roboto-7n.woff2) format('woff2'),url(../fonts/roboto-7n.woff) format('woff'),url(../fonts/roboto-7n.ttf) format('opentype');font-weight:700;font-style:normal;}
-      @font-face{font-family:'roboto';src:url(../fonts/roboto-7i.woff2) format('woff2'),url(../fonts/roboto-7i.woff) format('woff'),url(../fonts/roboto-7i.ttf) format('opentype');font-weight:700;font-style:italic;}
-      @font-face{font-family:'roboto';src:url(../fonts/roboto-4n.woff2) format('woff2'),url(../fonts/roboto-4n.woff) format('woff'),url(../fonts/roboto-4n.ttf) format('opentype');font-weight:400;font-style:normal;}
-      @font-face{font-family:'roboto';src:url(../fonts/roboto-4i.woff2) format('woff2'),url(../fonts/roboto-4i.woff) format('woff'),url(../fonts/roboto-4i.ttf) format('opentype');font-weight:400;font-style:italic;}
+      @font-face{font-family:'roboto';src:url(theme/fonts/roboto-7n.woff2) format('woff2'),url(theme/fonts/roboto-7n.woff) format('woff'),url(theme/fonts/roboto-7n.ttf) format('opentype');font-weight:700;font-style:normal;}
+      @font-face{font-family:'roboto';src:url(theme/fonts/roboto-7i.woff2) format('woff2'),url(theme/fonts/roboto-7i.woff) format('woff'),url(theme/fonts/roboto-7i.ttf) format('opentype');font-weight:700;font-style:italic;}
+      @font-face{font-family:'roboto';src:url(theme/fonts/roboto-4n.woff2) format('woff2'),url(theme/fonts/roboto-4n.woff) format('woff'),url(theme/fonts/roboto-4n.ttf) format('opentype');font-weight:400;font-style:normal;}
+      @font-face{font-family:'roboto';src:url(theme/fonts/roboto-4i.woff2) format('woff2'),url(theme/fonts/roboto-4i.woff) format('woff'),url(theme/fonts/roboto-4i.ttf) format('opentype');font-weight:400;font-style:italic;}
 
 /* PRE-SETUP */
-   /* Resets */
-      html#doc {
-         box-sizing: border-box;
-         -webkit-box-sizing: border-box;
-         margin: 0 !important;
-      }
-      #wpadminbar *, *, *:before, *:after, *:focus, *:hover {
-         outline: none;
-         box-sizing: inherit;
-         -webkit-box-sizing: inherit;
-         -webkit-font-smoothing: antialiased;
-         -moz-osx-font-smoothing: grayscale;
-         text-rendering: geometricPrecision;
-         -webkit-tap-highlight-color: transparent;
-         -webkit-tap-highlight-color: rgba(0,0,0,0);
-      }
-      body {
-         margin: 0;
-         padding: 0;
-         height: 100%;
-         font-style: normal;
-         cursor: default;
-         font-size: 100%;
-      }
-      svg:not(:root) {
-         overflow: hidden;
-      }
-      template, [hidden], .hidden, .hide {
-         display: none;
-      }
-      main, article, aside, details, figcaption, figure, footer,
-      header, hgroup, menu, nav, section, summary {
-         display: block;
-      }
-      input, optgroup, select, textarea {
-         color: inherit;
-         font: inherit;
-         margin: 0;
-      }
-      legend {
-         border: 0;
-         padding: 0;
-      }
-      .button,
-      keygen,
-      progress,
-      button, meter, select,
-      textarea, fieldset,
-      input[type='text'],
-      input[type='password'],
-      input[type='date'],
-      input[type='datetime'],
-      input[type='datetime-local'],
-      input[type='month'],
-      input[type='week'],
-      input[type='email'],
-      input[type='number'],
-      input[type='search'],
-      input[type='tel'],
-      input[type='time'],
-      input[type='url'],
-      input[type='file'],
-      input[type='submit'],
-      input[type='button'],
-      input:not([type='radio']):not([type='checkbox']) {
-         -moz-appearance: none;
-         -webkit-appearance: none;
-         transition: none;
-         -o-transition: none;
-         -moz-transition: none;
-         -webkit-transition: none;
-         outline: none !important;
-         background-image: none;
-         text-shadow: none;
-         -webkit-box-shadow: none;
-         box-shadow: none;
-         -webkit-border-radius: 0;
-         -khtml-border-radius: 0;
-         border-radius: 0;
-         text-indent: 0;
-         margin: 0;
-         border: 0;
-      }
-      ::-moz-focus-outer {
-         border: 0;
-         outline: none;
-      }
+	/* Normalize CSS v3.0.3 */
+		*,
+		*:before,
+		*:after {
+			box-sizing: inherit;
+		}
+		html {
+			box-sizing: border-box;
+			font-family: sans-serif;
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%
+		}
 
-   /* Preformatted Text */
-      pre code br {
-         display: none;
-      }
-      pre {
-         overflow: auto;
-         clear: both;
-         display: block;
-         margin: 1.5rem 0;
-      }
+		body {
+			margin: 0
+		}
 
-   /* Abbreviations */
-      abbr,
-      abbr[title],
-      acronym {
-         border-left: 0;
-         border-right: 0;
-         border-top: 0;
-         border-bottom-width: 3px;
-         border-bottom-style: dotted;
-         cursor: help;
-      }
+		article,
+		aside,
+		details,
+		figcaption,
+		figure,
+		footer,
+		header,
+		hgroup,
+		main,
+		menu,
+		nav,
+		section,
+		summary {
+			display: block
+		}
 
-   /* Subscript & Superscript */
-      sup, sub {
-         position: relative;
-         vertical-align: baseline;
-      }
-      sup {
-         top: -0.5em;
-      }
-      sub {
-         bottom: -0.25em;
-      }
+		audio,
+		canvas,
+		progress,
+		video {
+			display: inline-block;
+			vertical-align: baseline
+		}
 
-   /* Tables */
-      table {
-         border-collapse: collapse;
-         border-spacing: 0;
-         border: 0;
-         margin-bottom: 1.25rem;
-         max-width: 100%;
-         width: 100%;
-      }
-      td, th {
-         padding: 0;
-      }
-      table caption {
-         padding: 0.5rem 0;
-      }
-      table thead tr th,
-      table thead tr td {
-         padding: 0.5rem 0;
-      }
-      table tr th,
-      table tr td {
-         padding: 0.5rem 0;
-      }
-      table tfoot tr th,
-      table tfoot tr td {
-         padding: 0.5rem 0;
-      }
-      table thead tr th,
-      table tfoot tr th,
-      table tfoot tr td,
-      table tbody tr th,
-      table tbody tr td,
-      table tr td {
-         display: table-cell;
-         text-align: center;
-         border: 0;
-      }
+		audio:not([controls]) {
+			display: none;
+			height: 0
+		}
+
+		[hidden],
+		template {
+			display: none
+		}
+
+		a {
+			background-color: transparent
+		}
+
+		a:active,
+		a:hover {
+			outline: 0
+		}
+
+		abbr[title] {
+			border-bottom: 1px dotted
+		}
+
+		b,
+		strong {
+			font-weight: bold
+		}
+
+		dfn {
+			font-style: italic
+		}
+
+		h1 {
+			font-size: 2em;
+			margin: .67em 0
+		}
+
+		mark {
+			background: #ff0;
+			color: #000
+		}
+
+		small {
+			font-size: 80%
+		}
+
+		sub,
+		sup {
+			font-size: 75%;
+			line-height: 0;
+			position: relative;
+			vertical-align: baseline
+		}
+
+		sup {
+			top: -0.5em
+		}
+
+		sub {
+			bottom: -0.25em
+		}
+
+		img {
+			border: 0
+		}
+
+		svg:not(:root) {
+			overflow: hidden
+		}
+
+		figure {
+			margin: 1em 40px
+		}
+
+		hr {
+			box-sizing: content-box;
+			height: 0
+		}
+
+		pre {
+			overflow: auto
+		}
+
+		code,
+		kbd,
+		pre,
+		samp {
+			font-family: monospace, monospace;
+			font-size: 1em
+		}
+
+		button,
+		input,
+		optgroup,
+		select,
+		textarea {
+			color: inherit;
+			font: inherit;
+			margin: 0
+		}
+
+		button {
+			overflow: visible
+		}
+
+		button,
+		select {
+			text-transform: none
+		}
+
+		button,
+		html input[type="button"],
+		input[type="reset"],
+		input[type="submit"] {
+			-webkit-appearance: button;
+			cursor: pointer
+		}
+
+		button[disabled],
+		html input[disabled] {
+			cursor: default
+		}
+
+		button::-moz-focus-inner,
+		input::-moz-focus-inner {
+			border: 0;
+			padding: 0
+		}
+
+		input {
+			line-height: normal
+		}
+
+		input[type="checkbox"],
+		input[type="radio"] {
+			box-sizing: border-box;
+			padding: 0
+		}
+
+		input[type="number"]::-webkit-inner-spin-button,
+		input[type="number"]::-webkit-outer-spin-button {
+			height: auto
+		}
+
+		input[type="search"] {
+			-webkit-appearance: textfield;
+			box-sizing: content-box
+		}
+
+		input[type="search"]::-webkit-search-cancel-button,
+		input[type="search"]::-webkit-search-decoration {
+			-webkit-appearance: none
+		}
+
+		fieldset {
+			border: 1px solid silver;
+			margin: 0 2px;
+			padding: .35em .625em .75em
+		}
+
+		legend {
+			border: 0;
+			padding: 0
+		}
+
+		textarea {
+			overflow: auto
+		}
+
+		optgroup {
+			font-weight: bold
+		}
+
+		table {
+			border-collapse: collapse;
+			border-spacing: 0
+		}
+
+		td,
+		th {
+			padding: 0
+		}
+
 
 /* FONT */
    /* Font Families */
-      body, p {
+      body, p, a {
          font-family: 'lato', sans-serif;
       }
       h1, h2, h3, h4, h5, h6,
+      nav .navbar ul li a,e
       #doc .button,
       #doc input.button,
       #doc input[type='submit'],
@@ -374,3 +439,82 @@
       p + h4, p + h5, p + h6 {
          margin-top: 2.8125rem;
       }
+
+/* NAV */
+   /* Nav Elements */
+		nav.navbar {
+			display: flex;
+			width: 100%;
+			height: auto;
+		}
+		nav.navbar .nav-icon {
+
+      }
+      nav.navbar .nav-icon img {
+         height: 5rem;
+         width: auto;
+      }
+		nav.navbar .nav-links {
+			display: flex;
+			width: 100%;
+			height: 5rem;
+			justify-content: flex-end;
+			align-items: center;
+      }
+      nav.navbar .nav-links a {
+         margin-left: 2%;
+      }
+      nav.navbar .nav-links a:last-of-type {
+         margin-right: 2%;
+      }
+/* STRUCTURE */
+		.container {
+			margin: 0 auto;
+			padding: 0 20px;
+			max-width: 1000px;
+		}
+		.row::before,
+		.row::after {
+		  display: table;
+		  content: ' ';
+		  clear: both;
+		}
+		.row .row {
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		.column {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.one,
+		.one-third,
+		.two-thirds,
+		.one-fourth,
+		.half {
+		  width: 100%;
+		}
+/* RESPONSIVE */
+	/* min-800px */
+		@media only screen and (min-width: 800px) {
+			.one {
+			  width: 100%;
+			}
+			.half {
+			  width: calc(100% / 2);
+			}
+			.one-third {
+			  width: calc(100% / 3);
+			}
+			.one-fourth {
+			  width: calc(100% / 4);
+			}
+			.two-thirds {
+			  width: calc(100% / 3 * 2);
+			}
+			.column {
+				padding-left: 10px;
+				padding-right: 10px;
+				float: left;
+			}
+		 }
